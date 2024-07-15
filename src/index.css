@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-black;
+  }
+  .dark body {
+    @apply bg-[#252128] text-white;
+  }
+  @font-face {
+    .inter-<uniquifier > {
+      font-family: "Inter", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: <weight>;
+      font-style: normal;
+      font-variation-settings: "slnt" 0;
+    }
+  }
+}
+.wrapper {
+  @apply mr-10;
+}
+
+.hilal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #3a3a3a;
+  clip-path: circle(50% at 75% 25%);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
