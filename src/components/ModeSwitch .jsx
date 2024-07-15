@@ -1,9 +1,10 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/no-unescaped-entities */
 import { useEffect } from "react";
 import "../index.css";
 import useLocalStorage from "../hooks/useLocalStorage";
 
-const Header = () => {
+const ModeSwitch = () => {
   const [darkMode, setDarkMode] = useLocalStorage("dark-mode", false);
   const [language, setLanguage] = useLocalStorage("language", "en");
 
@@ -25,8 +26,8 @@ const Header = () => {
   };
 
   return (
-    <div className="fixed top-0 right-0 m-4">
-      <div className="flex items-center space-x-4">
+    <div className=" flex m-4 justify-end ">
+      <div className="flex items-center space-x-4 ">
         <div
           className={`w-12 h-6 flex items-center rounded-full p-1 cursor-pointer ${darkMode ? "bg-[#3a3a3a]" : "bg-[#3e3ecf]"}`}
           onClick={toggleDarkMode}
@@ -65,4 +66,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default ModeSwitch;

@@ -19,9 +19,7 @@
     }
   }
 }
-.wrapper {
-  @apply mr-10;
-}
+
 
 .hilal {
   position: absolute;

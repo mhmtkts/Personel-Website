@@ -1,10 +1,10 @@
 import "./App.css";
-import Header from "./components/Header";
+import ModeSwitch from "./components/ModeSwitch ";
 
 function App() {
   return (
-    <div className="wrapper">
-      <Header />
+    <div className="mr-40 ml-30">
+      <ModeSwitch />
     </div>
   );
 }
