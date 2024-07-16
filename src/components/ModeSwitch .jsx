@@ -29,7 +29,7 @@ const ModeSwitch = () => {
     <div className=" flex m-4 justify-end ">
       <div className="flex items-center space-x-4 ">
         <div
-          className={`w-12 h-6 flex items-center rounded-full p-1 cursor-pointer ${darkMode ? "bg-[#3a3a3a]" : "bg-[#3e3ecf]"}`}
+          className={`w-12 h-5 flex items-center rounded-full p-1 cursor-pointer ${darkMode ? "bg-[#3a3a3a]" : "bg-[#3e3ecf]"}`}
           onClick={toggleDarkMode}
         >
           <div
@@ -46,10 +46,10 @@ const ModeSwitch = () => {
           onClick={toggleLanguage}
         >
           {language === "en" ? (
-            <span>
+            <span className="text-[#777777]">
               <span className="text-[#3e3ecf]  dark:text-[#b8b4e5]">
                 TÜRKÇE
-              </span>
+              </span >
               'YE GEÇ
             </span>
           ) : (
