@@ -1,12 +1,14 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
+import translations from "./translations";
 
 const initialState = {
   darkMode: false,
-  language: 'en',
+  language: "en",
+  translations: translations.en,
 };
 
 const modeSlice = createSlice({
-  name: 'mode',
+  name: "mode",
   initialState,
   reducers: {
     toggleDarkMode: (state) => {
@@ -14,6 +16,7 @@ const modeSlice = createSlice({
     },
     setLanguage: (state, action) => {
       state.language = action.payload;
+      state.translations = translations[action.payload];
       document.documentElement.lang = action.payload;
     },
   },

@@ -1,7 +1,9 @@
 import { useSelector } from "react-redux";
+import translations from "../store/translations";
 
 /* eslint-disable react/prop-types */
 const Header = ({ skillsRef, projectsRef }) => {
+  const translations = useSelector((state) => state.mode.translations);
   const darkMode = useSelector((state) => state.mode.darkMode);
   const scrollToSkills = () => {
     skillsRef.current.scrollIntoView({ behavior: "smooth" });
@@ -10,11 +12,18 @@ const Header = ({ skillsRef, projectsRef }) => {
   const scrollToProjects = () => {
     projectsRef.current.scrollIntoView({ behavior: "smooth" });
   };
+  const handleHireMeClick = () => {
+    window.location.href = "mailto:mahmutaktas.m@gmail.com";
+  };
 
   return (
     <div className="flex justify-between items-center p-4 text-white">
-      <div className={`relative w-16 h-16 flex items-center justify-center  ${darkMode ? 'bg-[#4731d3]' : 'bg-[#edecfe]'} rounded-full`}>
-        <span className={`absolute text-2xl transform rotate-45 font-semibold ${darkMode ? 'text-[#746afa]' : 'text-[#8f88ff]'}`}>
+      <div
+        className={`relative w-16 h-16 flex items-center justify-center  ${darkMode ? "bg-[#4731d3]" : "bg-[#edecfe]"} rounded-full`}
+      >
+        <span
+          className={`absolute text-2xl transform rotate-45 font-semibold ${darkMode ? "text-[#746afa]" : "text-[#8f88ff]"}`}
+        >
           M
         </span>
       </div>
@@ -31,8 +40,11 @@ const Header = ({ skillsRef, projectsRef }) => {
         >
           Projects
         </span>
-        <button className="bg-white text-[#3138a0] border-[#3138a0]/75 border-2  text-lg font-semibold px-4 py-2 w-[8.5rem] h-[3.25rem] rounded">
-          Hire Me
+        <button
+          onClick={handleHireMeClick}
+          className="bg-white text-[#3138a0] border-[#3138a0]/75 border-2  text-lg font-semibold px-4 py-2 w-[8.5rem] h-[3.25rem] rounded"
+        >
+          {translations.hireMe}
         </button>
       </nav>
     </div>
