@@ -1,5 +1,8 @@
+import { useSelector } from "react-redux";
+
 /* eslint-disable react/prop-types */
 const Header = ({ skillsRef, projectsRef }) => {
+  const darkMode = useSelector((state) => state.mode.darkMode);
   const scrollToSkills = () => {
     skillsRef.current.scrollIntoView({ behavior: "smooth" });
   };
@@ -10,8 +13,8 @@ const Header = ({ skillsRef, projectsRef }) => {
 
   return (
     <div className="flex justify-between items-center p-4 text-white">
-      <div className="relative w-16 h-16 flex items-center justify-center bg-[#4731d3]  rounded-full">
-        <span className="absolute text-2xl transform rotate-45 font-semibold text-[#8f88ff]">
+      <div className={`relative w-16 h-16 flex items-center justify-center  ${darkMode ? 'bg-[#4731d3]' : 'bg-[#edecfe]'} rounded-full`}>
+        <span className={`absolute text-2xl transform rotate-45 font-semibold ${darkMode ? 'text-[#746afa]' : 'text-[#8f88ff]'}`}>
           M
         </span>
       </div>
