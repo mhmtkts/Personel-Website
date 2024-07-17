@@ -4,13 +4,19 @@ import { useSelector } from "react-redux";
 const Header = ({ skillsRef, projectsRef }) => {
   const translations = useSelector((state) => state.mode.translations);
   const darkMode = useSelector((state) => state.mode.darkMode);
+
   const scrollToSkills = () => {
-    skillsRef.current.scrollIntoView({ behavior: "smooth" });
+    if (skillsRef.current) {
+      skillsRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const scrollToProjects = () => {
-    projectsRef.current.scrollIntoView({ behavior: "smooth" });
+    if (projectsRef.current) {
+      projectsRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   };
+
   const handleHireMeClick = () => {
     window.location.href = "mailto:mahmutaktas.m@gmail.com";
   };
