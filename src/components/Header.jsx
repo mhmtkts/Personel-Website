@@ -1,5 +1,4 @@
 import { useSelector } from "react-redux";
-import translations from "../store/translations";
 
 /* eslint-disable react/prop-types */
 const Header = ({ skillsRef, projectsRef }) => {
@@ -42,7 +41,7 @@ const Header = ({ skillsRef, projectsRef }) => {
         </span>
         <button
           onClick={handleHireMeClick}
-          className="bg-white text-[#3138a0] border-[#3138a0]/75 border-2  text-lg font-semibold px-4 py-2 w-[8.5rem] h-[3.25rem] rounded"
+          className="bg-white text-[#3138a0] border-[#3138a0]/75 border-2  text-lg font-semibold px-4 py-2 w-[8.5rem] h-[3.25rem] rounded-md"
         >
           {translations.hireMe}
         </button>
