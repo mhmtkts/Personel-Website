@@ -49,17 +49,17 @@ const Projects = forwardRef((props, ref) => {
           </p>
           <div className="flex mb-4 justify-start">
             <span
-              className={`flex mt-5 mr-4 justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"}  ${darkMode ? "border-[#b8b4e5]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}
+              className={`flex mt-5 mr-4 justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}
             >
               react
             </span>
             <span
-              className={`flex mt-5 mr-4  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"}  ${darkMode ? "border-[#b8b4e5]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}
+              className={`flex mt-5 mr-4  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}
             >
               js
             </span>
             <span
-              className={`flex mt-5  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"}  ${darkMode ? "border-[#b8b4e5]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}
+              className={`flex mt-5  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}
             >
               axios
             </span>
@@ -84,17 +84,17 @@ const Projects = forwardRef((props, ref) => {
           </p>
           <div className="flex mb-4 justify-start">
             <span
-              className={`flex mt-5 mr-4 justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"}  ${darkMode ? "border-[#b8b4e5]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}
+              className={`flex mt-5 mr-4 justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}
             >
               react
             </span>
             <span
-              className={`flex mt-5 mr-4  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"}  ${darkMode ? "border-[#b8b4e5]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}
+              className={`flex mt-5 mr-4  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}
             >
               js
             </span>
             <span
-              className={`flex mt-5  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"}  ${darkMode ? "border-[#b8b4e5]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}
+              className={`flex mt-5  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}
             >
               cypress
             </span>
@@ -120,17 +120,17 @@ const Projects = forwardRef((props, ref) => {
           </p>
           <div className="flex mb-4 justify-start">
             <span
-              className={`flex mt-5 mr-4 justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"}  ${darkMode ? "border-[#b8b4e5]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}
+              className={`flex mt-5 mr-4 justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}
             >
               react
             </span>
             <span
-              className={`flex mt-5 mr-4  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"}  ${darkMode ? "border-[#b8b4e5]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}
+              className={`flex mt-5 mr-4  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}
             >
               js
             </span>
             <span
-              className={`flex mt-5  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"}  ${darkMode ? "border-[#b8b4e5]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}
+              className={`flex mt-5  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}
             >
               tailwind
             </span>
