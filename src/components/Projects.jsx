@@ -31,7 +31,7 @@ const Projects = forwardRef((props, ref) => {
   };
 
   return (
-    <div ref={ref} id="projects" className="flex flex-col p-8">
+    <div ref={ref} id="projects" className="flex flex-col p-8 mb-20">
       <h1 className="text-5xl font-semibold text-[#1f2a36] dark:text-[#aebdce] mb-8">
         {translations.projects}
       </h1>

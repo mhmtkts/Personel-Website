@@ -13,6 +13,7 @@ function App() {
   const projectsRef = useRef(null);
   
   return (
+    <>
     <div className="mr-40 ml-28 mt-8">
       <ModeSwitch />
       <Header skillsRef={skillsRef} projectsRef={projectsRef}/>
@@ -20,8 +21,10 @@ function App() {
       <Skills ref={skillsRef} id="skills"/>
       <Profile/>
       <Projects ref={projectsRef} id="projects"/>
-      <Footer/>
+      
     </div>
+      <Footer/>
+      </>
   );
 }
 

@@ -26,7 +26,8 @@ const translations = {
       "I am passionate about technology and continuously seek to improve my skills.",
     aboutMeDetails2:
       "I enjoy working on innovative projects and collaborating with talented teams.",
-    footerText: "Let's work together on your next product.",
+    footerText1: "Let's work together on ",
+    footerText2: "your next product.",
     jsDesc:
       "After an intensive 3-month training period, I gained extensive knowledge and experience in JavaScript. I used this language in every project, developing interactive and dynamic web applications.",
     reactDesc:
@@ -66,7 +67,8 @@ const translations = {
       "Teknolojiye tutkuyla bağlıyım ve becerilerimi sürekli geliştirmeye çalışıyorum.",
     aboutMeDetails2:
       "Yenilikçi projeler üzerinde çalışmaktan ve yetenekli ekiplerle işbirliği yapmaktan hoşlanıyorum.",
-    footerText: "Bir sonraki ürününüzde birlikte çalışalım.",
+    footerText1: "Bir sonraki ürününüzde",
+    footerText2: "birlikte çalışalım.",
     jsDesc:
       "3 ay boyunca yoğun bir eğitim aldıktan sonra JavaScript konusunda kapsamlı bilgi ve deneyim kazandım. Yaptığım her projede bu dili kullanarak etkileşimli ve dinamik web uygulamaları geliştirdim.",
     reactDesc:
