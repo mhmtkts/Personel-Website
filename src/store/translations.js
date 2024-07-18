@@ -3,7 +3,8 @@ const translations = {
     name: "Mahmut Aktaş",
     creativeThinker: "Creative thinker",
     minimalismLover: "Minimalism lover",
-    intro: "Hi, I'm Mahmut. I'm a full-stack developer. If you are looking for a developer who can craft solid and scalable frontend products with great user experiences, let's shake hands with me.",
+    intro:
+      "Hi, I'm Mahmut. I'm a full-stack developer. If you are looking for a developer who can craft solid and scalable frontend products with great user experiences, let's shake hands with me.",
     hireMe: "Hire Me",
     github: "GitHub",
     linkedin: "LinkedIn",
@@ -14,24 +15,36 @@ const translations = {
     city: "City",
     education: "Education",
     preferredRole: "Preferred Role",
-    ankara: "Ankara",
-    bio: "Hacettepe University, Biology\nGraduated in 2016",
+    izmir: "Izmir",
+    bio: "Dokuz Eylul University, Science Teacher\nGraduated in 2021",
     preferredRoleDetails: "Frontend, UI",
     projects: "Projects",
     workintech: "Workintech",
     randomJokes: "Random Jokes",
     journey: "Journey",
+    aboutMeDetails1:
+      "I am passionate about technology and continuously seek to improve my skills.",
+    aboutMeDetails2:
+      "I enjoy working on innovative projects and collaborating with talented teams.",
     footerText: "Let's work together on your next product.",
-    jsDesc: "After an intensive 3-month training period, I gained extensive knowledge and experience in JavaScript. I used this language in every project, developing interactive and dynamic web applications.",
-    reactDesc: "I underwent an intensive 3-month training period with React.js, learning to create modern and high-performance user interfaces. I have effectively used React in various projects.",
-    nodeDesc: "I took an intensive 3-month training course in Node.js, acquiring skills to develop server-side applications. I have provided backend solutions in various projects using Node.js.",
-    pythonDesc: "I attended the Code in Place course at Stanford University and developed beginner-level projects with Python. I have knowledge of basic algorithms and data structures in this language.",
+    jsDesc:
+      "After an intensive 3-month training period, I gained extensive knowledge and experience in JavaScript. I used this language in every project, developing interactive and dynamic web applications.",
+    reactDesc:
+      "I underwent an intensive 3-month training period with React.js, learning to create modern and high-performance user interfaces. I have effectively used React in various projects.",
+    nodeDesc:
+      "I took an intensive 3-month training course in Node.js, acquiring skills to develop server-side applications. I have provided backend solutions in various projects using Node.js.",
+    pythonDesc:
+      "I attended the Code in Place course at Stanford University and developed beginner-level projects with Python. I have knowledge of basic algorithms and data structures in this language.",
+    challengePizza: "Challenge Pizza is an online pizza ordering platform where users can customize and order their own pizzas. This project offers users the possibility to choose toppings, sauces, dough thickness and cooking time. Developed using modern web technologies, it includes a user-friendly interface and a dynamic ordering system. Challenge Pizza is a project that showcases web development capabilities and prioritizes user experience.",
+    netflixMockup: "Netflix Mockup is a detailed recreation of the user interface of a popular streaming platform. This project showcases an enhanced front-end design and development capability using modern web technologies, including key features such as a dynamic movie catalog, search functionality and user authentication. Netflix Mockup provides a user-friendly and visually appealing experience.",
+    personalWebsite: "The Personal Portfolio Website is a project designed to showcase individual projects, skills, and experiences. Built using React and JavaScript, it provides a clean, responsive interface for presenting a developer's work. Key features include project showcases with descriptions and links, a section for skills and technologies, and a contact form for inquiries. This project demonstrates proficiency in modern web development practices and the ability to create visually appealing, functional websites."    
   },
   tr: {
     name: "Mahmut Aktaş",
     creativeThinker: "Yaratıcı düşünen",
     minimalismLover: "Minimalizm aşığı",
-    intro: "Merhaba, ben Mahmut. Ben bir full-stack geliştiricisiyim. Sağlam ve ölçeklenebilir frontend ürünleri yaratabilen bir geliştirici arıyorsanız, el sıkışalım.",
+    intro:
+      "Merhaba, ben Mahmut. Ben bir full-stack geliştiricisiyim. Sağlam ve ölçeklenebilir frontend ürünleri yaratabilen bir geliştirici arıyorsanız, el sıkışalım.",
     hireMe: "Beni İşe Al",
     github: "GitHub",
     linkedin: "LinkedIn",
@@ -42,18 +55,29 @@ const translations = {
     city: "İkamet Şehri",
     education: "Eğitim Durumu",
     preferredRole: "Tercih Ettiği Rol",
-    ankara: "Ankara",
-    bio: "Hacettepe Üniversitesi, Biyoloji\n2016 Mezunu",
+    izmir: "İzmir",
+    bio: "Dokuz Eylül Üniversitesi, Fen Bilgisi Öğretmenliği\n2021 Mezunu",
     preferredRoleDetails: "Frontend, UI",
     projects: "Projeler",
     workintech: "Workintech",
     randomJokes: "Random Jokes",
     journey: "Journey",
+    aboutMeDetails1:
+      "Teknolojiye tutkuyla bağlıyım ve becerilerimi sürekli geliştirmeye çalışıyorum.",
+    aboutMeDetails2:
+      "Yenilikçi projeler üzerinde çalışmaktan ve yetenekli ekiplerle işbirliği yapmaktan hoşlanıyorum.",
     footerText: "Bir sonraki ürününüzde birlikte çalışalım.",
-    jsDesc: "3 ay boyunca yoğun bir eğitim aldıktan sonra JavaScript konusunda kapsamlı bilgi ve deneyim kazandım. Yaptığım her projede bu dili kullanarak etkileşimli ve dinamik web uygulamaları geliştirdim.",
-    reactDesc: "React.js ile 3 aylık yoğun bir eğitim süreci geçirdim. Bu süreçte, modern ve performanslı kullanıcı arayüzleri oluşturmayı öğrendim ve çeşitli projelerde React'i etkin bir şekilde kullandım.",
-    nodeDesc: "Node.js ile 3 aylık yoğun bir eğitim aldım. Bu süre zarfında, server-side uygulamalar geliştirme becerisi kazandım ve çeşitli projelerde backend çözümleri ürettim.",
-    pythonDesc: "Stanford Üniversitesi'nde düzenlenen Code in Place kursuna katıldım ve Python ile başlangıç seviyesinde projeler geliştirdim. Bu dilde temel algoritmalar ve veri yapıları konularında bilgi sahibiyim.",
+    jsDesc:
+      "3 ay boyunca yoğun bir eğitim aldıktan sonra JavaScript konusunda kapsamlı bilgi ve deneyim kazandım. Yaptığım her projede bu dili kullanarak etkileşimli ve dinamik web uygulamaları geliştirdim.",
+    reactDesc:
+      "React.js ile 3 aylık yoğun bir eğitim süreci geçirdim. Bu süreçte, modern ve performanslı kullanıcı arayüzleri oluşturmayı öğrendim ve çeşitli projelerde React'i etkin bir şekilde kullandım.",
+    nodeDesc:
+      "Node.js ile 3 aylık yoğun bir eğitim aldım. Bu süre zarfında, server-side uygulamalar geliştirme becerisi kazandım ve çeşitli projelerde backend çözümleri ürettim.",
+    pythonDesc:
+      "Stanford Üniversitesi'nde düzenlenen Code in Place kursuna katıldım ve Python ile başlangıç seviyesinde projeler geliştirdim. Bu dilde temel algoritmalar ve veri yapıları konularında bilgi sahibiyim.",
+    challengePizza: "Challenge Pizza, kullanıcıların kendi pizzalarını özelleştirip sipariş verebileceği çevrimiçi bir pizza sipariş platformudur. Bu proje, kullanıcılara malzemeleri, sosları, hamur kalınlığını ve pişirme süresini seçme imkanı sunar. Modern web teknolojileri kullanılarak geliştirilmiş olup, kullanıcı dostu bir arayüz ve dinamik bir sipariş sistemi içerir. Challenge Pizza, web geliştirme yeteneklerini sergileyen ve kullanıcı deneyimini ön planda tutan bir projedir.",
+    netflixMockup:"Netflix Mockup, popüler bir akış platformunun kullanıcı arayüzünün detaylı bir yeniden yaratımıdır. Bu proje, dinamik bir film kataloğu, arama fonksiyonu ve kullanıcı kimlik doğrulama gibi temel özellikleri içeren, modern web teknolojilerini kullanarak geliştirilmiş bir ön uç tasarım ve geliştirme yeteneğini sergilemektedir. Netflix Mockup, kullanıcı dostu ve görsel olarak çekici bir deneyim sunar.",
+    personalWebsite: "Kişisel Portföy Web Sitesi, bireysel projeleri, becerileri ve deneyimleri sergilemek için tasarlanmış bir projedir. React ve JavaScript kullanılarak oluşturulan bu web sitesi, bir geliştiricinin çalışmalarını sunmak için temiz ve duyarlı bir arayüz sağlar. Temel özellikler arasında açıklamalar ve bağlantılar içeren proje vitrinleri, beceriler ve teknolojiler için bir bölüm ve sorular için bir iletişim formu yer alıyor. Bu proje, modern web geliştirme uygulamalarındaki yeterliliği ve görsel olarak çekici, işlevsel web siteleri oluşturma becerisini göstermektedir."
   },
 };
 

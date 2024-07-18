@@ -43,13 +43,13 @@ const Hero = () => {
           </button>
           <button
             onClick={handleGithubClick}
-            className={`flex items-center justify-center bg-white dark:bg-gray-700 ${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"}  ${darkMode ? "border-[#b8b4e5]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-32 rounded-md`}
+            className={`flex items-center justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"}  ${darkMode ? "border-[#b8b4e5]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-32 rounded-md`}
           >
             <FaGithub size={24} className="mr-2" /> {translations.github}
           </button>
           <button
             onClick={handleLinkedinClick}
-            className={`flex items-center justify-center bg-white dark:bg-gray-700 ${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"}  ${darkMode ? "border-[#b8b4e5]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-36 rounded-md`}
+            className={`flex items-center justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"}  ${darkMode ? "border-[#b8b4e5]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-36 rounded-md`}
           >
             <FaLinkedin size={24} className="mr-2 " /> {translations.linkedin}
           </button>
