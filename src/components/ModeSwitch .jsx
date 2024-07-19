@@ -1,13 +1,22 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/no-unescaped-entities */
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleDarkMode, setLanguage } from "../store/modeSlice";
+import { toggleDarkMode, setLanguage, setInitialState } from "../store/modeSlice";
+import useLocalStorage from "../hooks/useLocalStorage";
 import "../index.css";
 
 const ModeSwitch = () => {
   const dispatch = useDispatch();
   const darkMode = useSelector((state) => state.mode.darkMode);
   const language = useSelector((state) => state.mode.language);
+  
+  const [storedDarkMode, setStoredDarkMode] = useLocalStorage("darkMode", false);
+  const [storedLanguage, setStoredLanguage] = useLocalStorage("language", "en");
+
+  useEffect(() => {
+    dispatch(setInitialState({ darkMode: storedDarkMode, language: storedLanguage }));
+  }, []);
 
   useEffect(() => {
     if (darkMode) {
@@ -15,7 +24,12 @@ const ModeSwitch = () => {
     } else {
       document.documentElement.classList.remove("dark");
     }
+    setStoredDarkMode(darkMode);
   }, [darkMode]);
+
+  useEffect(() => {
+    setStoredLanguage(language);
+  }, [language]);
 
   const handleToggleDarkMode = () => {
     dispatch(toggleDarkMode());
