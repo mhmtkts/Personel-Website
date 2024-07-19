@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleDarkMode, setLanguage } from "../store/modeSlice";
