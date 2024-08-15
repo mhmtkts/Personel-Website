@@ -32,8 +32,8 @@ const translations = {
       "After an intensive 3-month training period, I gained extensive knowledge and experience in JavaScript. I used this language in every project, developing interactive and dynamic web applications.",
     reactDesc:
       "I underwent an intensive 3-month training period with React.js, learning to create modern and high-performance user interfaces. I have effectively used React in various projects.",
-    nodeDesc:
-      "I took an intensive 3-month training course in Node.js, acquiring skills to develop server-side applications. I have provided backend solutions in various projects using Node.js.",
+    javaDesc:
+      "I took an intensive 3-month Java course, during which I gained skills in developing server-side applications, mastered Object-Oriented Programming (OOP) principles, and provided backend solutions for various projects.",
     pythonDesc:
       "I attended the Code in Place course at Stanford University and developed beginner-level projects with Python. I have knowledge of basic algorithms and data structures in this language.",
     challengePizza: "Challenge Pizza is an online pizza ordering platform where users can customize and order their own pizzas. This project offers users the possibility to choose toppings, sauces, dough thickness and cooking time. Developed using modern web technologies, it includes a user-friendly interface and a dynamic ordering system. Challenge Pizza is a project that showcases web development capabilities and prioritizes user experience.",
@@ -73,8 +73,8 @@ const translations = {
       "3 ay boyunca yoğun bir eğitim aldıktan sonra JavaScript konusunda kapsamlı bilgi ve deneyim kazandım. Yaptığım her projede bu dili kullanarak etkileşimli ve dinamik web uygulamaları geliştirdim.",
     reactDesc:
       "React.js ile 3 aylık yoğun bir eğitim süreci geçirdim. Bu süreçte, modern ve performanslı kullanıcı arayüzleri oluşturmayı öğrendim ve çeşitli projelerde React'i etkin bir şekilde kullandım.",
-    nodeDesc:
-      "Node.js ile 3 aylık yoğun bir eğitim aldım. Bu süre zarfında, server-side uygulamalar geliştirme becerisi kazandım ve çeşitli projelerde backend çözümleri ürettim.",
+    javaDesc:
+      "Java ile 3 aylık yoğun bir eğitim aldım. Bu süre zarfında, server-side uygulamalar geliştirme becerisi kazandım, OOP (Nesne Yönelimli Programlama) prensiplerine hakim oldum ve çeşitli projelerde backend çözümleri ürettim.",
     pythonDesc:
       "Stanford Üniversitesi'nde düzenlenen Code in Place kursuna katıldım ve Python ile başlangıç seviyesinde projeler geliştirdim. Bu dilde temel algoritmalar ve veri yapıları konularında bilgi sahibiyim.",
     challengePizza: "Challenge Pizza, kullanıcıların kendi pizzalarını özelleştirip sipariş verebileceği çevrimiçi bir pizza sipariş platformudur. Bu proje, kullanıcılara malzemeleri, sosları, hamur kalınlığını ve pişirme süresini seçme imkanı sunar. Modern web teknolojileri kullanılarak geliştirilmiş olup, kullanıcı dostu bir arayüz ve dinamik bir sipariş sistemi içerir. Challenge Pizza, web geliştirme yeteneklerini sergileyen ve kullanıcı deneyimini ön planda tutan bir projedir.",

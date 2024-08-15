@@ -29,10 +29,10 @@ const Skills = forwardRef((props, ref) => {
         </div>
         <div>
           <h2 className="text-3xl font-semibold text-[#3e3ecf] dark:text-[#b8b4e5] mb-4">
-            Node.Js
+            Java
           </h2>
           <p className="text-[#777777] dark:text-[white]">
-            {translations.nodeDesc}
+            {translations.javaDesc}
           </p>
         </div>
         <div>
