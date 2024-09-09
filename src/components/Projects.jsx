@@ -27,7 +27,7 @@ const Projects = forwardRef((props, ref) => {
   };
 
   const handleViewPersonal = () => {
-    window.location.href = "https://personel-website-self.vercel.app/";
+    window.location.href = "https://aktas.me";
   };
 
   return (
