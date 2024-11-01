@@ -14,7 +14,7 @@ function App() {
   
   return (
     <>
-    <div className="mr-40 ml-28 mt-8">
+    <div className="mr-4 md:mr-40 ml-4 md:ml-28 mt-8">
       <ModeSwitch />
       <Header skillsRef={skillsRef} projectsRef={projectsRef}/>
       <Hero/>
