@@ -6,28 +6,16 @@ const Projects = forwardRef((props, ref) => {
   const darkMode = useSelector((state) => state.mode.darkMode);
   const translations = useSelector((state) => state.mode.translations);
 
-  const handleGithubPizza = () => {
-    window.location.href = "https://github.com/mhmtkts/challenge-pizza";
+  const openLink = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
   };
 
-  const handleViewPizza = () => {
-    window.location.href = "https://challenge-pizza-five.vercel.app/";
-  };
-
-  const handleGithubNetflix = () => {
-    window.location.href = "https://github.com/mhmtkts/netflix-mockup";
-  };
-
-  const handleViewNetflix = () => {
-    window.location.href = "https://netflix-mockup-chi.vercel.app/";
-  };
-
-  const handleGithubPersonal = () => {
-    window.location.href = "https://github.com/mhmtkts/Personel-Website";
-  };
-
-  const handleViewPersonal = () => {
-    window.location.href = "https://aktas.me";
+  const handleLink = (url, event) => {
+    // Check if middle mouse button (which is button 1) or left click
+    if (event.button === 0 || event.button === 1) {
+      event.preventDefault(); // Prevent default behavior
+      openLink(url);
+    }
   };
 
   return (
@@ -48,29 +36,32 @@ const Projects = forwardRef((props, ref) => {
             {translations.challengePizza}
           </p>
           <div className="flex mb-4 justify-start">
-            <span
-              className={`flex mt-5 mr-4 justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}
-            >
+            <span className={`flex mt-5 mr-4 justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}>
               react
             </span>
-            <span
-              className={`flex mt-5 mr-4  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}
-            >
+            <span className={`flex mt-5 mr-4  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}>
               js
             </span>
-            <span
-              className={`flex mt-5  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}
-            >
+            <span className={`flex mt-5  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}>
               axios
             </span>
-            
           </div>
           <div className="flex justify-between ">
-                <span className={`${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"} font-semibold text-lg underline  underline-offset-4 cursor-pointer`}  onClick={handleGithubPizza}>Github</span>
-                <span className={`${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"} font-semibold text-lg underline  underline-offset-4 cursor-pointer`}  onClick={handleViewPizza}>View Site</span>
-            </div>
+            <span 
+              className={`${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"} font-semibold text-lg underline  underline-offset-4 cursor-pointer`} 
+              onMouseDown={(e) => handleLink("https://github.com/mhmtkts/challenge-pizza", e)}
+            >
+              Github
+            </span>
+            <span 
+              className={`${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"} font-semibold text-lg underline  underline-offset-4 cursor-pointer`} 
+              onMouseDown={(e) => handleLink("https://challenge-pizza-five.vercel.app/", e)}
+            >
+              View Site
+            </span>
+          </div>
         </div>
-        <div>
+
         <div className="w-80">
           <img
             src="https://i.imgur.com/kyKGUd7.png"
@@ -83,30 +74,32 @@ const Projects = forwardRef((props, ref) => {
             {translations.netflixMockup}
           </p>
           <div className="flex mb-4 justify-start">
-            <span
-              className={`flex mt-5 mr-4 justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}
-            >
+            <span className={`flex mt-5 mr-4 justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}>
               react
             </span>
-            <span
-              className={`flex mt-5 mr-4  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}
-            >
+            <span className={`flex mt-5 mr-4  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}>
               js
             </span>
-            <span
-              className={`flex mt-5  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}
-            >
+            <span className={`flex mt-5  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}>
               cypress
             </span>
-            
           </div>
           <div className="flex justify-between ">
-                <span className={`${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"} font-semibold text-lg underline  underline-offset-4 cursor-pointer`}  onClick={handleGithubNetflix}>Github</span>
-                <span className={`${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"} font-semibold text-lg underline  underline-offset-4 cursor-pointer`}  onClick={handleViewNetflix}>View Site</span>
-            </div>
+            <span 
+              className={`${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"} font-semibold text-lg underline  underline-offset-4 cursor-pointer`} 
+              onMouseDown={(e) => handleLink("https://github.com/mhmtkts/netflix-mockup", e)}
+            >
+              Github
+            </span>
+            <span 
+              className={`${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"} font-semibold text-lg underline  underline-offset-4 cursor-pointer`} 
+              onMouseDown={(e) => handleLink("https://netflix-mockup-chi.vercel.app/", e)}
+            >
+              View Site
+            </span>
+          </div>
         </div>
-        </div>
-        <div>
+
         <div className="w-80">
           <img
             src="https://i.imgur.com/C4CiPFg.png"
@@ -119,31 +112,72 @@ const Projects = forwardRef((props, ref) => {
             {translations.personalWebsite}
           </p>
           <div className="flex mb-4 justify-start">
-            <span
-              className={`flex mt-5 mr-4 justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}
-            >
+            <span className={`flex mt-5 mr-4 justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}>
               react
             </span>
-            <span
-              className={`flex mt-5 mr-4  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}
-            >
+            <span className={`flex mt-5 mr-4  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}>
               js
             </span>
-            <span
-              className={`flex mt-5  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}
-            >
+            <span className={`flex mt-5  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}>
               tailwind
             </span>
-            
           </div>
           <div className="flex justify-between ">
-                <span className={`${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"} font-semibold text-lg underline  underline-offset-4 cursor-pointer`}  onClick={handleGithubPersonal}>Github</span>
-                <span className={`${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"} font-semibold text-lg underline  underline-offset-4 cursor-pointer`}  onClick={handleViewPersonal}>View Site</span>
-            </div>
+            <span 
+              className={`${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"} font-semibold text-lg underline  underline-offset-4 cursor-pointer`} 
+              onMouseDown={(e) => handleLink("https://github.com/mhmtkts/Personel-Website", e)}
+            >
+              Github
+            </span>
+            <span 
+              className={`${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"} font-semibold text-lg underline  underline-offset-4 cursor-pointer`} 
+              onMouseDown={(e) => handleLink("https://aktas.me", e)}
+            >
+              View Site
+            </span>
+          </div>
         </div>
+
+        <div className="w-80">
+          <img
+            src="https://imgur.com/yA5YmZU.png"
+            className=" h-64 overflow-hidden rounded-xl shadow-lg object-cover "
+          />
+          <h2 className="text-2xl font-semibold text-[#3e3ecf] dark:text-[#b8b4e5] mb-2 mt-4">
+            Product List
+          </h2>
+          <p className="text-[#777777] dark:text-[white] text-lg">
+            {translations.productList}
+          </p>
+          <div className="flex mb-4 justify-start">
+            <span className={`flex mt-5 mr-4 justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}>
+              react
+            </span>
+            <span className={`flex mt-5 mr-4  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}>
+              redux
+            </span>
+            <span className={`flex mt-5  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}>
+              tailwind
+            </span>
+          </div>
+          <div className="flex justify-between ">
+            <span 
+              className={`${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"} font-semibold text-lg underline  underline-offset-4 cursor-pointer`} 
+              onMouseDown={(e) => handleLink("https://github.com/mhmtkts/product-list", e)}
+            >
+              Github
+            </span>
+            <span 
+              className={`${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"} font-semibold text-lg underline  underline-offset-4 cursor-pointer`} 
+              onMouseDown={(e) => handleLink("https://product-list-ten-mu.vercel.app/", e)}
+            >
+              View Site
+            </span>
+          </div>
         </div>
       </div>
     </div>
   );
 });
+
 export default Projects;
