@@ -16,46 +16,57 @@ const Hero = () => {
   };
   return (
     <div className="flex flex-col md:flex-row justify-between items-start mt-8 md:mt-16 p-4 md:p-8">
-      <div className="w-full md:w-1/2 space-y-6 mb-8 md:mb-0">
+      <div className="w-full md:w-1/2 space-y-4 md:space-y-6 mb-8 md:mb-0">
         <div className="flex items-center space-x-4">
-          <div className="border-b-2 border-[#3e3ecf] w-20 dark:border-[#b8b4e5]"></div>
-          <h2 className="text-[#3e3ecf] dark:text-[#b8b4e5] text-lg">
+          <div className="border-b-2 border-[#3e3ecf] w-16 md:w-20 dark:border-[#b8b4e5]"></div>
+          <h2 className="text-[#3e3ecf] dark:text-[#b8b4e5] text-base md:text-lg">
             {translations.name}
           </h2>
         </div>
-        <div className="space-y-2">
-          <h1 className="text-7xl font-bold text-[#1f2a36] dark:text-[#aebdce]">
+        <div className="space-y-1 md:space-y-2">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-[#1f2a36] dark:text-[#aebdce] leading-tight">
             {translations.creativeThinker}
           </h1>
-          <h1 className="text-7xl font-bold text-[#1f2a36] dark:text-[#aebdce]">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-[#1f2a36] dark:text-[#aebdce] leading-tight">
             {translations.minimalismLover}
           </h1>
         </div>
-        <p className="text-lg  text-[#777777] dark:text-[white]  ">
+        <p className="text-base md:text-lg text-[#777777] dark:text-[white] max-w-xl">
           {translations.intro}
         </p>
-        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-4 md:mt-6">
           <button
             onClick={handleHireMeClick}
-            className={`w-full md:w-32 bg-[#3138a0] dark:bg-[#e0e2fe] text-[white] dark:text-[black]  ${darkMode ? "border-transparent" : "border-[#3138a0]"} w-32 border-2 text-lg font-semibold  px-4 py-3 rounded-md`}
+            className={`w-full sm:w-auto bg-[#3138a0] dark:bg-[#e0e2fe] text-white dark:text-black 
+              ${darkMode ? "border-transparent" : "border-[#3138a0]"} 
+              border-2 text-base md:text-lg font-semibold px-4 py-2.5 md:py-3 rounded-md
+              min-w-[128px] hover:opacity-90 transition-opacity`}
           >
             {translations.hireMe}
           </button>
           <button
             onClick={handleGithubClick}
-            className={`w-full md:w-32 flex items-center justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"}  ${darkMode ? "border-[#b8b4e5]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-32 rounded-md`}
+            className={`w-full sm:w-auto flex items-center justify-center bg-white dark:bg-[#383838] 
+              ${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"}  
+              ${darkMode ? "border-[#b8b4e5]" : "border-[#3138a0]"} 
+              border-2 text-base md:text-lg font-semibold px-4 py-2.5 md:py-3 rounded-md
+              min-w-[128px] hover:opacity-90 transition-opacity`}
           >
-            <FaGithub size={24} className="mr-2" /> {translations.github}
+            <FaGithub size={20} className="mr-2" /> {translations.github}
           </button>
           <button
             onClick={handleLinkedinClick}
-            className={`w-full md:w-36 flex items-center justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"}  ${darkMode ? "border-[#b8b4e5]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-36 rounded-md`}
+            className={`w-full sm:w-auto flex items-center justify-center bg-white dark:bg-[#383838] 
+              ${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"}  
+              ${darkMode ? "border-[#b8b4e5]" : "border-[#3138a0]"} 
+              border-2 text-base md:text-lg font-semibold px-4 py-2.5 md:py-3 rounded-md
+              min-w-[144px] hover:opacity-90 transition-opacity`}
           >
-            <FaLinkedin size={24} className="mr-2 " /> {translations.linkedin}
+            <FaLinkedin size={20} className="mr-2" /> {translations.linkedin}
           </button>
         </div>
       </div>
-      <div className="w-full md:w-[42%] h-64 md:h-96 overflow-hidden rounded-xl shadow-lg">
+      <div className="w-full md:w-[42%] h-56 sm:h-64 md:h-96 overflow-hidden rounded-xl shadow-lg">
         <img
           src="https://i.pinimg.com/originals/ee/fe/0e/eefe0e32d21b59933e319ba01ba78554.jpg"
           alt={translations.name}
