@@ -207,7 +207,7 @@ const Projects = forwardRef((props, ref) => {
             </span>
             <span 
               className={`${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"} font-semibold text-lg underline  underline-offset-4 cursor-pointer`} 
-              onMouseDown={(e) => handleLink("https://budget-tracker-mhmtkts.vercel.app/", e)}
+              onMouseDown={(e) => handleLink("https://budget-tracker-phi-seven.vercel.app/", e)}
             >
               View Site
             </span>
