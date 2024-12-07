@@ -18,7 +18,6 @@ Bu proje, kişisel portfolio websitemi React ve JavaScript kullanarak oluşturdu
 - HTML5
 - CSS3
 - React Router
-- [Diğer kullandığınız önemli kütüphaneler]
 
 ## ⚙️ Kurulum
 
@@ -52,7 +51,7 @@ Proje localhost:3000 portunda çalışacaktır. Tarayıcınızda açarak kullanm
 
 ## 📸 Ekran Görüntüleri
 
-[[Buraya projenizin ekran görüntülerini ekleyebilirsiniz](https://imgur.com/iz9leCT)]
+[[https://imgur.com/iz9leCT](https://imgur.com/iz9leCT)]
 
 ## 🤝 Katkıda Bulunma
 
@@ -68,7 +67,7 @@ Bu proje [MIT](LICENSE) lisansı altında lisanslanmıştır.
 
 ## 📧 İletişim
 
-[İsminiz] - [E-posta adresiniz]
+[Mahmut AKTAŞ](https://github.com/mhmtkts) - [mahmutaktas.m@gmail.com](mailto:mahmutaktas.m@gmail.com)
 
-Proje Linki: [https://github.com/[kullanıcı-adınız]/portfolio-projesi](https://github.com/mhmtkts/product-list)
+Proje Linki: [https://github.com/mhmtkts/product-list](https://github.com/mhmtkts/product-list)
 ```
