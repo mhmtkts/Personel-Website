@@ -30,10 +30,10 @@ const Header = ({ skillsRef, projectsRef }) => {
       </div>
       <nav className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-20">
         <span className="cursor-pointer text-[#777777] font-semibold text-lg" onClick={scrollToSkills}>
-          Skills
+        {translations.skills}
         </span>
         <span className="cursor-pointer text-[#777777] font-semibold text-lg" onClick={scrollToProjects}>
-          Projects
+        {translations.projects}
         </span>
         <button onClick={handleHireMeClick}
           className="bg-white text-[#3138a0] border-[#3138a0]/75 border-2 text-lg font-semibold px-4 py-2 w-[8.5rem] h-[3.25rem] rounded-md">
