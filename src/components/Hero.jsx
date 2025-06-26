@@ -1,4 +1,4 @@
-import { useSelector,useDispatch } from 'react-redux';
+import { useSelector} from 'react-redux';
 import githubIcon from "../assets/github-ico.png";
 import linkedinIcon from "../assets/linkedin-ico.png";
 import linkedinDarkIcon from "../assets/linkedin-dark.svg";
