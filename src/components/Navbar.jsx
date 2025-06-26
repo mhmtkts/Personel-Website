@@ -131,7 +131,7 @@ const Navbar = ({homeRef, aboutRef, projectsRef}) => {
               <NavItem onClick={() => handleNavigation('projects')} darkMode={darkMode}>
                 {translations.projects}
               </NavItem>
-              <NavItem onClick={() => handleNavigation('contact')} darkMode={darkMode}>
+              <NavItem onClick={() => window.location.href = 'mailto:mahmutaktas.m@gmail.com'} darkMode={darkMode}>
                 {translations.contact}
               </NavItem>
 
