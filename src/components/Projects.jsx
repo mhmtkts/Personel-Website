@@ -1,221 +1,97 @@
 /* eslint-disable react/display-name */
 import { forwardRef } from "react";
 import { useSelector } from "react-redux";
+import project1Img from "../assets/Group-1.png";
+import project2Img from "../assets/Group-2.png";
+import project3Img from "../assets/Group-3.png";
+import project4Img from "../assets/Group-4.png"; 
+
 
 const Projects = forwardRef((props, ref) => {
-  const darkMode = useSelector((state) => state.mode.darkMode);
-  const translations = useSelector((state) => state.mode.translations);
+    const translations = useSelector((state) => state.mode.translations);
+    const darkMode = useSelector((state) => state.mode.darkMode);
 
-  const openLink = (url) => {
-    window.open(url, '_blank', 'noopener,noreferrer');
-  };
-
-  const handleLink = (url, event) => {
-    // Check if middle mouse button (which is button 1) or left click
-    if (event.button === 0 || event.button === 1) {
-      event.preventDefault(); // Prevent default behavior
-      openLink(url);
-    }
-  };
-
-  return (
-    <div ref={ref} id="projects" className="flex flex-col p-8 mb-20">
-      <h1 className="text-5xl font-semibold text-[#1f2a36] dark:text-[#aebdce] mb-8">
-        {translations.projects}
-      </h1>
-      <div className="flex flex-wrap justify-evenly gap-8">
-        <div className="w-80">
-          <img
-            src="https://i.imgur.com/CPcKpHr.png"
-            className=" h-64 overflow-hidden rounded-xl shadow-lg object-cover "
-          />
-          <h2 className="text-2xl font-semibold text-[#3e3ecf] dark:text-[#b8b4e5] mb-2 mt-4">
-            Challenge Pizza
-          </h2>
-          <p className="text-[#777777] dark:text-[white] text-lg">
-            {translations.challengePizza}
-          </p>
-          <div className="flex mb-4 justify-start">
-            <span className={`flex mt-5 mr-4 justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}>
-              react
-            </span>
-            <span className={`flex mt-5 mr-4  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}>
-              js
-            </span>
-            <span className={`flex mt-5  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}>
-              axios
-            </span>
-          </div>
-          <div className="flex justify-between ">
-            <span 
-              className={`${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"} font-semibold text-lg underline  underline-offset-4 cursor-pointer`} 
-              onMouseDown={(e) => handleLink("https://github.com/mhmtkts/challenge-pizza", e)}
-            >
-              Github
-            </span>
-            <span 
-              className={`${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"} font-semibold text-lg underline  underline-offset-4 cursor-pointer`} 
-              onMouseDown={(e) => handleLink("https://challenge-pizza-five.vercel.app/", e)}
-            >
-              View Site
-            </span>
-          </div>
-        </div>
-
-        <div className="w-80">
-          <img
-            src="https://i.imgur.com/kyKGUd7.png"
-            className=" h-64 overflow-hidden rounded-xl shadow-lg object-cover "
-          />
-          <h2 className="text-2xl font-semibold text-[#3e3ecf] dark:text-[#b8b4e5] mb-2 mt-4">
-            Netflix Mockup
-          </h2>
-          <p className="text-[#777777] dark:text-[white] text-lg">
-            {translations.netflixMockup}
-          </p>
-          <div className="flex mb-4 justify-start">
-            <span className={`flex mt-5 mr-4 justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}>
-              react
-            </span>
-            <span className={`flex mt-5 mr-4  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}>
-              js
-            </span>
-            <span className={`flex mt-5  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}>
-              cypress
-            </span>
-          </div>
-          <div className="flex justify-between ">
-            <span 
-              className={`${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"} font-semibold text-lg underline  underline-offset-4 cursor-pointer`} 
-              onMouseDown={(e) => handleLink("https://github.com/mhmtkts/netflix-mockup", e)}
-            >
-              Github
-            </span>
-            <span 
-              className={`${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"} font-semibold text-lg underline  underline-offset-4 cursor-pointer`} 
-              onMouseDown={(e) => handleLink("https://netflix-mockup-chi.vercel.app/", e)}
-            >
-              View Site
-            </span>
-          </div>
-        </div>
-
-        <div className="w-80">
-          <img
-            src="https://i.imgur.com/C4CiPFg.png"
-            className=" h-64 overflow-hidden rounded-xl shadow-lg object-cover "
-          />
-          <h2 className="text-2xl font-semibold text-[#3e3ecf] dark:text-[#b8b4e5] mb-2 mt-4">
-            Personel Website
-          </h2>
-          <p className="text-[#777777] dark:text-[white] text-lg">
-            {translations.personalWebsite}
-          </p>
-          <div className="flex mb-4 justify-start">
-            <span className={`flex mt-5 mr-4 justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}>
-              react
-            </span>
-            <span className={`flex mt-5 mr-4  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}>
-              js
-            </span>
-            <span className={`flex mt-5  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}>
-              tailwind
-            </span>
-          </div>
-          <div className="flex justify-between ">
-            <span 
-              className={`${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"} font-semibold text-lg underline  underline-offset-4 cursor-pointer`} 
-              onMouseDown={(e) => handleLink("https://github.com/mhmtkts/Personel-Website", e)}
-            >
-              Github
-            </span>
-            <span 
-              className={`${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"} font-semibold text-lg underline  underline-offset-4 cursor-pointer`} 
-              onMouseDown={(e) => handleLink("https://aktas.me", e)}
-            >
-              View Site
-            </span>
-          </div>
-        </div>
-
-        <div className="w-80">
-          <img
-            src="https://imgur.com/yA5YmZU.png"
-            className=" h-64 overflow-hidden rounded-xl shadow-lg object-cover "
-          />
-          <h2 className="text-2xl font-semibold text-[#3e3ecf] dark:text-[#b8b4e5] mb-2 mt-4">
-            Product List
-          </h2>
-          <p className="text-[#777777] dark:text-[white] text-lg">
-            {translations.productList}
-          </p>
-          <div className="flex mb-4 justify-start">
-            <span className={`flex mt-5 mr-4 justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}>
-              react
-            </span>
-            <span className={`flex mt-5 mr-4  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}>
-              redux
-            </span>
-            <span className={`flex mt-5  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}>
-              tailwind
-            </span>
-          </div>
-          <div className="flex justify-between ">
-            <span 
-              className={`${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"} font-semibold text-lg underline  underline-offset-4 cursor-pointer`} 
-              onMouseDown={(e) => handleLink("https://github.com/mhmtkts/product-list", e)}
-            >
-              Github
-            </span>
-            <span 
-              className={`${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"} font-semibold text-lg underline  underline-offset-4 cursor-pointer`} 
-              onMouseDown={(e) => handleLink("https://product-list-ten-mu.vercel.app/", e)}
-            >
-              View Site
-            </span>
-          </div>
-        </div>
-
-        <div className="w-80">
-          <img
-            src="https://imgur.com/rV2MzzI.png"
-            className="h-64 overflow-hidden rounded-xl shadow-lg object-cover"
-          />
-          <h2 className="text-2xl font-semibold text-[#3e3ecf] dark:text-[#b8b4e5] mb-2 mt-4">
-            Budget Tracker
-          </h2>
-          <p className="text-[#777777] dark:text-[white] text-lg">
-            {translations.budgetTracker}
-          </p>
-          <div className="flex mb-4 justify-start">
-            <span className={`flex mt-5 mr-4 justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}>
-              react
-            </span>
-            <span className={`flex mt-5 mr-4  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}>
-              redux
-            </span>
-            <span className={`flex mt-5  justify-center bg-white dark:bg-[#383838] ${darkMode ? "text-[#8f88ff]" : "text-[#3138a0]"}  ${darkMode ? "border-[#8f88ff]" : "border-[#3138a0]"} border-2 text-lg font-semibold px-4 w-20 rounded-md`}>
-              tailwind
-            </span>
-          </div>
-          <div className="flex justify-between">
-            <span 
-              className={`${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"} font-semibold text-lg underline  underline-offset-4 cursor-pointer`} 
-              onMouseDown={(e) => handleLink("https://github.com/mhmtkts/budget-tracker", e)}
-            >
-              Github
-            </span>
-            <span 
-              className={`${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"} font-semibold text-lg underline  underline-offset-4 cursor-pointer`} 
-              onMouseDown={(e) => handleLink("https://budget-tracker-phi-seven.vercel.app/", e)}
-            >
-              View Site
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+    return (
+        <section id="projects" ref={ref} className='bg-white dark:bg-[#252128] py-28 max-md:py-12'>
+            <div className='max-w-6xl w-11/12 m-auto'>
+                <h2 className='mb-36 max-sm:mb-16 block text-xl my-[0.83em] font-bold '>
+                    <span className='block text-4xl uppercase tracking-[3px] text-center mb-14 relative text-[#111111] dark:text-white'> 
+                        {translations.projects}
+                        <span className="absolute top-[calc(100%+1.5rem)] left-1/2 h-[5px] w-12 -translate-x-1/2 bg-[#7843e9] rounded-[5px] content-['']"></span>
+                    </span>
+                    <span className={`block text-center ${darkMode ? "text-white" : "text-[#555]"}  text-lg max-sm:text-base  font-normal max-w-3xl leading-relaxed m-auto`}>
+                        {translations.projectsDetail1}
+                    </span>
+                </h2>
+                <div>
+                    <div className="grid grid-cols-[3fr_2fr] max-lg:grid-cols-1 max-lg:gap-4 max-lg:mb-16 max-lg:text-center gap-12 mb-28">
+                        <div className="overflow-hidden">
+                            <img className="w-full block object-cover" src={project1Img} alt="Software Screenshot" loading="lazy"/>
+                        </div>
+                        <div className="max-lg:items-center py-4 flex flex-col justify-center items-start">
+                            <h3 className="font-bold text-2xl max-md:text-xl mb-5">
+                                {translations.portfolyo}
+                            </h3>
+                            <p className={`text-base max-md:text-sm ${darkMode ? "text-white" : "text-neutral-600"} max-w-xl leading-[1.7] mb-7`}>
+                                {translations.personalWebsite}
+                            </p>
+                            <a className='py-3 px-10 text-base bg-[#7843E9] text-white uppercase tracking-[1px] inline-block font-bold rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.15)] transition-transform duration-300 hover:-translate-y-[3px]' href="/project-1" target="_blank" rel="noopener noreferrer">
+                                {translations.projectButton}
+                            </a>
+                        </div>
+                    </div>
+                    <div className="grid grid-cols-[3fr_2fr] max-lg:grid-cols-1 max-lg:gap-4 max-lg:mb-16 max-lg:text-center gap-12 mb-28">
+                        <div className="overflow-hidden">
+                            <img className="w-full block object-cover" src={project2Img} alt="Software Screenshot" loading="lazy"/>
+                        </div>
+                        <div className="max-lg:items-center py-4 flex flex-col justify-center items-start">
+                            <h3 className="font-bold text-2xl max-md:text-xl mb-5">
+                                {translations.exerciseGuide}
+                            </h3>
+                            <p className={`text-base max-md:text-sm ${darkMode ? "text-white" : "text-neutral-600"} max-w-xl leading-[1.7] mb-7`}>
+                                {translations.exerciseDesc}
+                            </p>
+                            <a className='py-3 px-10 text-base bg-[#7843E9] text-white uppercase tracking-[1px] inline-block font-bold rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.15)] transition-transform duration-300 hover:-translate-y-[3px]' href="/project-2" target="_blank" rel="noopener noreferrer">
+                                {translations.projectButton}
+                            </a>
+                        </div>
+                    </div>
+                    <div className="grid grid-cols-[3fr_2fr] max-lg:grid-cols-1 max-lg:gap-4 max-lg:mb-16 max-lg:text-center gap-12 mb-28">
+                        <div className="overflow-hidden">
+                            <img className="w-full block object-cover" src={project3Img} alt="Software Screenshot" loading="lazy"/>
+                        </div>
+                        <div className="max-lg:items-center py-4 flex flex-col justify-center items-start">
+                            <h3 className="font-bold text-2xl max-md:text-xl mb-5">
+                                {translations.budgetTracker}
+                            </h3>
+                            <p className={`text-base max-md:text-sm ${darkMode ? "text-white" : "text-neutral-600"} max-w-xl leading-[1.7] mb-7`}>
+                                {translations.budgetTrackerDesc}
+                            </p>
+                            <a className='py-3 px-10 text-base bg-[#7843E9] text-white uppercase tracking-[1px] inline-block font-bold rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.15)] transition-transform duration-300 hover:-translate-y-[3px]' href="/project-3" target="_blank" rel="noopener noreferrer">
+                                {translations.projectButton}
+                            </a>
+                        </div>
+                    </div>
+                    <div className="grid grid-cols-[3fr_2fr] max-lg:grid-cols-1 max-lg:gap-4 max-lg:mb-16 max-lg:text-center gap-12 mb-28">
+                        <div className="overflow-hidden">
+                            <img className="w-full block object-cover" src={project4Img} alt="Software Screenshot" loading="lazy"/>
+                        </div>
+                        <div className="max-lg:items-center py-4 flex flex-col justify-center items-start">
+                            <h3 className="font-bold text-2xl max-md:text-xl mb-5">
+                                {translations.productList}
+                            </h3>
+                            <p className={`text-base max-md:text-sm ${darkMode ? "text-white" : "text-neutral-600"} max-w-xl leading-[1.7] mb-7`}>
+                                {translations.productListDesc}
+                            </p>
+                            <a className='py-3 px-10 text-base bg-[#7843E9] text-white uppercase tracking-[1px] inline-block font-bold rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.15)] transition-transform duration-300 hover:-translate-y-[3px]' href="/project-4" target="_blank" rel="noopener noreferrer">
+                                {translations.projectButton}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
 });
 
 export default Projects;

@@ -1,80 +1,64 @@
-import { useSelector } from "react-redux";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { useSelector,useDispatch } from 'react-redux';
+import githubIcon from "../assets/github-ico.png";
+import linkedinIcon from "../assets/linkedin-ico.png";
+import linkedinDarkIcon from "../assets/linkedin-dark.svg";
+import githubDarkIcon from "../assets/github-dark.svg";
+import emailWhiteIcon from "../assets/gmail.png";
+import emailIcon from "../assets/email-dark.png";
 
-const Hero = () => {
-  const darkMode = useSelector((state) => state.mode.darkMode);
-  const translations = useSelector((state) => state.mode.translations);
-  const handleHireMeClick = () => {
-    window.location.href = "mailto:mahmutaktas.m@gmail.com";
-  };
-  const handleGithubClick = () => {
-    window.location.href = "https://github.com/mhmtkts";
-  };
 
-  const handleLinkedinClick = () => {
-    window.location.href = "https://www.linkedin.com/in/mahmutaktaş/";
-  };
-  return (
-    <div className="flex flex-col md:flex-row justify-between items-start mt-8 md:mt-16 p-4 md:p-8">
-      <div className="w-full md:w-1/2 space-y-4 md:space-y-6 mb-8 md:mb-0">
-        <div className="flex items-center space-x-4">
-          <div className="border-b-2 border-[#3e3ecf] w-16 md:w-20 dark:border-[#b8b4e5]"></div>
-          <h2 className="text-[#3e3ecf] dark:text-[#b8b4e5] text-base md:text-lg">
-            {translations.name}
-          </h2>
+/* eslint-disable react/prop-types */
+const Hero = ({projectsRef}) => {
+    const translations = useSelector((state) => state.mode.translations);
+    const darkMode = useSelector((state) => state.mode.darkMode);
+
+    const scrollToProjects = () => {
+        if (projectsRef.current) {
+            projectsRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
+    const backgroundStyle = {
+        backgroundImage: darkMode 
+            ? "linear-gradient(to right, rgba(17,24,39,0.85), rgba(17,24,39,0.85)), url('/common-bg.svg')"
+            : "linear-gradient(to right, rgba(245,245,245,0.8), rgba(245,245,245,0.8)), url('/common-bg.svg')",
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat'
+    };
+
+
+    return (
+        <div className={`relative md:h-screen max-h-[120rem]`} style={backgroundStyle}>
+            <div className="max-sm:static max-sm:transform-none max-sm:py-24 max-sm:pb-24 max-sm:m-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-4xl w-[92%]">
+                    <h1 className={`max-sm:text-[2rem] block text-[3.5rem] uppercase tracking-[3px] text-center ${darkMode ? "text-white" : "text-[#111]"} font-extrabold`}>{translations.name}</h1>
+                    <div>
+                        <p className={`max-sm:text-base block my-[1em] mx-0 [unicode-bidi:isolate] ${darkMode ? "text-white" : "text-[#333333]"} text-[1.3rem] text-center w-full leading-[1.6]`}>
+                            {translations.journey}
+                        </p>
+                    </div>
+                    <div className='mt-20 text-center'>
+                    <button onClick={scrollToProjects} className='py-4 px-16 text-xl bg-[#7843E9] text-white uppercase tracking-[1px] inline-block font-bold rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.15)] transition-transform duration-300 hover:-translate-y-[3px]'>{translations.projects}</button>
+                    </div>
+            </div>
+            <div className="hidden md:block absolute  top-1/2 transform -translate-y-1/2 shadow-[0px_7px_29px_0px_rgba(100,100,111,0.2)] p-2 ">
+                <a className='w-[30px] h-[30px] mb-2 block  transition-colors duration-300 rounded-[5px] hover:bg-[rgba(120,67,233,0.2)]' href="https://github.com/mhmtkts">
+                    <img  src={darkMode ? githubIcon : githubDarkIcon} alt="GitHub" />
+                </a>
+                <a className="w-[30px] h-[30px] mb-2 block  transition-colors duration-300 rounded-[5px] hover:bg-[rgba(120,67,233,0.2)]" href="https://www.linkedin.com/in/mahmutaktaş/">
+                    <img  src={darkMode ? linkedinIcon : linkedinDarkIcon} alt="LinkedIn" />
+                </a>
+                <a className="w-[30px] h-[30px] block transition-colors duration-300 rounded-[5px] hover:bg-[rgba(120,67,233,0.2)]" href="mailto:mahmutaktas.m@gmail.com">
+                    <img  src={darkMode ? emailWhiteIcon : emailIcon} alt="Email" />
+                </a>
+            </div>
+            <div className='absolute bottom-[3%] left-1/2 transform -translate-x-1/2 text-center'>
+                <div className={`hidden md:block w-[25px] h-[40px] border-2 ${darkMode ? 'border-gray-200' : 'border-gray-600'} rounded-full flex justify-center items-start pt-1`}>
+                    <div className={`ml-2 w-1 h-2 ${darkMode ? 'bg-gray-200' : 'bg-gray-600'} rounded-full animate-scroll-wheel`}></div>
+                </div>
+            </div>
         </div>
-        <div className="space-y-1 md:space-y-2">
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-[#1f2a36] dark:text-[#aebdce] leading-tight">
-            {translations.creativeThinker}
-          </h1>
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-[#1f2a36] dark:text-[#aebdce] leading-tight">
-            {translations.minimalismLover}
-          </h1>
-        </div>
-        <p className="text-base md:text-lg text-[#777777] dark:text-[white] max-w-xl">
-          {translations.intro}
-        </p>
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-4 md:mt-6">
-          <button
-            onClick={handleHireMeClick}
-            className={`w-full sm:w-auto bg-[#3138a0] dark:bg-[#e0e2fe] text-white dark:text-black 
-              ${darkMode ? "border-transparent" : "border-[#3138a0]"} 
-              border-2 text-base md:text-lg font-semibold px-4 py-2.5 md:py-3 rounded-md
-              min-w-[128px] hover:opacity-90 transition-opacity`}
-          >
-            {translations.hireMe}
-          </button>
-          <button
-            onClick={handleGithubClick}
-            className={`w-full sm:w-auto flex items-center justify-center bg-white dark:bg-[#383838] 
-              ${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"}  
-              ${darkMode ? "border-[#b8b4e5]" : "border-[#3138a0]"} 
-              border-2 text-base md:text-lg font-semibold px-4 py-2.5 md:py-3 rounded-md
-              min-w-[128px] hover:opacity-90 transition-opacity`}
-          >
-            <FaGithub size={20} className="mr-2" /> {translations.github}
-          </button>
-          <button
-            onClick={handleLinkedinClick}
-            className={`w-full sm:w-auto flex items-center justify-center bg-white dark:bg-[#383838] 
-              ${darkMode ? "text-[#e0e2fe]" : "text-[#3138a0]"}  
-              ${darkMode ? "border-[#b8b4e5]" : "border-[#3138a0]"} 
-              border-2 text-base md:text-lg font-semibold px-4 py-2.5 md:py-3 rounded-md
-              min-w-[144px] hover:opacity-90 transition-opacity`}
-          >
-            <FaLinkedin size={20} className="mr-2" /> {translations.linkedin}
-          </button>
-        </div>
-      </div>
-      <div className="w-full md:w-[42%] h-56 sm:h-64 md:h-96 overflow-hidden rounded-xl shadow-lg">
-        <img
-          src="https://i.pinimg.com/originals/ee/fe/0e/eefe0e32d21b59933e319ba01ba78554.jpg"
-          alt={translations.name}
-          className="object-cover object-bottom w-full h-full"
-        />
-      </div>
-    </div>
-  );
-};
+    );
+}
 
 export default Hero;

@@ -1,47 +1,51 @@
-import { useSelector } from "react-redux";
+import { useSelector } from 'react-redux';
+import githubIcon from "../assets/github-ico.png";
+import linkedinIcon from "../assets/linkedin-ico.png";
+import linkedinDarkIcon from "../assets/linkedin-dark.svg";
+import githubDarkIcon from "../assets/github-dark.svg";
+import emailWhiteIcon from "../assets/gmail.png";
+import emailIcon from "../assets/email-dark.png";
+
 
 const Footer = () => {
-  const translations = useSelector((state) => state.mode.translations);
-  
-  return (
-    <div className="bg-[#f9f9f9] dark:bg-black w-full px-4 py-12 md:pt-20 md:pb-28">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-2xl md:text-5xl font-semibold text-[#1f2a36] dark:text-[#aebdce] text-center md:text-left mb-4 md:mr-40 md:ml-36">
-          {translations.footerText1}
-        </h1>
-        <h1 className="text-2xl md:text-5xl font-semibold text-[#1f2a36] dark:text-[#aebdce] text-center md:text-left mb-12 md:mr-40 md:ml-36">
-          {translations.footerText2}
-        </h1>
-        
-        <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 md:mt-16 md:ml-36 md:mr-48">
-          {/* Email */}
-          <a
-            href="mailto:mahmutaktas.m@gmail.com"
-            className="text-[#af0c48] dark:text-[#b8b4e5] font-semibold flex items-center no-underline"
-          >
-            <span className="mr-2 no-underline">👉</span>{" "}
-            <span className="underline text-sm md:text-base">mahmutaktas.m@gmail.com</span>
-          </a>
-          
-          {/* Social Links */}
-          <div className="flex justify-center md:justify-start space-x-4">
-            <a
-              href="https://github.com/mhmtkts"
-              className="text-[#00ab6b] dark:text-[#17d18b] font-semibold text-sm md:text-base"
-            >
-              Github
-            </a>
-            <a
-              href="https://linkedin.com/in/mahmutaktaş"
-              className="text-[#0077b5] dark:text-[#0ba6f6] font-semibold text-sm md:text-base"
-            >
-              LinkedIn
-            </a>
-          </div>
+    const translations = useSelector((state) => state.mode.translations);
+    const darkMode = useSelector((state) => state.mode.darkMode);
+    return (
+        <footer className={`${darkMode ? "bg-black" : "bg-gray-100"}`}>
+        <div className="max-w-6xl w-11/12 m-auto">
+            <div className='flex max-sm:block max-sm:py-14 justify-between py-20'>
+                <div className='order-2 max-lg:mb-11'>
+                    <h2 className='text-xl font-bold uppercase tracking-[1px]'>
+                        <span>{translations.footerSocial}</span>
+                    </h2>
+                    <div className='mt-4 flex flex-wrap'>
+                    <a className='text-inherit no-underline' href="https://github.com/mhmtkts">
+                        <img className='mr-2 w-6 overflow-clip [overflow-clip-margin:content-box]' src={darkMode ? githubIcon : githubDarkIcon} alt="GitHub" />
+                    </a>
+                    <a className='text-inherit no-underline' href="https://www.linkedin.com/in/mahmutaktaş/">
+                        <img className='mr-2 w-6 overflow-clip [overflow-clip-margin:content-box]' src={darkMode ? linkedinIcon : linkedinDarkIcon} alt="LinkedIn" />
+                    </a>
+                    <a className='text-inherit no-underline' href="mailto:mahmutaktas.m@gmail.com">
+                        <img className='mr-2 w-6 overflow-clip [overflow-clip-margin:content-box]' src={darkMode ? emailWhiteIcon : emailIcon} alt="Email" />
+                    </a>
+                    </div>
+                </div>
+                <div className='order-1 w-2/5 max-lg:w-full max-w-lg'>
+                    <h2 className='text-xl font-bold uppercase tracking-[1px]'>
+                        MAHMUT AKTAŞ
+                    </h2>
+                    <p className='mt-4 text-sm leading-[1.7]'>
+                        {translations.footerText}
+                    </p>
+                </div>
+            </div>
+            <div className=' text-xs text-center py-10 border-t border-t-[#444444]'>
+                <span>© Copyright {new Date().getFullYear()}.  Made by Mahmut Aktaş.</span>
+
+            </div>
         </div>
-      </div>
-    </div>
+    </footer>
   );
-};
+}
 
 export default Footer;
