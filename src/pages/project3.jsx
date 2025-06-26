@@ -20,12 +20,12 @@ const Project3 = () => {
         <>
         <Navbar/>
         <section className="relative max-h-[120rem]" style={backgroundStyle}>
-            <div className="pt-40 pb-40 max-w-3xl w-11/12 m-auto">
-                <h1 className="text-6xl uppercase tracking-[3px] text-center font-extrabold  pb-2">
+            <div className="max-sm:static max-sm:py-24 max-sm:translate-x-0 max-sm:translate-y-0 pt-40 pb-40 max-w-3xl w-11/12 m-auto">
+                <h1 className="text-6xl max-sm:text-4xl uppercase tracking-[3px] text-center font-extrabold  pb-2">
                     {translations.budgetTracker}
                 </h1>
                 <div className="mt-8 max-w-7xl">
-                    <p className="text-xl text-center w-full leading-[1.6]">
+                    <p className={`${darkMode ? "text-white" : "text-[#333333]"} text-xl max-sm:text-lg text-center w-full leading-[1.6]`}>
                         {translations.budgetTrackerBannerDesc}
                     </p>
                 </div>
@@ -45,21 +45,21 @@ const Project3 = () => {
                     </div>
                     <div className="w-full max-w-3xl m-auto">
                         <div className="mb-16">
-                            <h2 className="font-bold text-3xl mb-6">
+                            <h2 className="font-bold text-3xl max-sm:text-xl mb-6">
                                 {translations.projectOverview}
                             </h2>
-                            <p className={`text-lg leading-[1.7] mb-4 ${darkMode ? "text-white" : "text-neutral-600"}`}>
+                            <p className={`text-lg max-sm:text-base leading-[1.7] mb-4 ${darkMode ? "text-white" : "text-neutral-600"}`}>
                                 {translations.budgetTrackerDesc1}
                             </p>
-                            <p className={`text-lg leading-[1.7] mb-4 ${darkMode ? "text-white" : "text-neutral-600"}`}>
+                            <p className={`text-lg max-sm:text-base leading-[1.7] mb-4 ${darkMode ? "text-white" : "text-neutral-600"}`}>
                                 {translations.budgetTrackerDesc2}
                             </p>
-                            <p className={`text-lg leading-[1.7] mb-4 ${darkMode ? "text-white" : "text-neutral-600"}`}>
+                            <p className={`text-lg max-sm:text-base leading-[1.7] mb-4 ${darkMode ? "text-white" : "text-neutral-600"}`}>
                                 {translations.budgetTrackerDesc3}
                             </p>
                         </div>
                         <div className="mb-16">
-                            <h2 className="font-bold text-2xl mb-7">
+                            <h2 className="font-bold text-2xl max-sm:text-xl mb-7">
                                 {translations.tools}
                             </h2>
                             <div className="flex flex-wrap">
@@ -81,15 +81,17 @@ const Project3 = () => {
                             </div>
                         </div>
                         <div>
-                            <h2 className="font-bold text-2xl mb-7">
+                            <h2 className="font-bold text-2xl max-sm:text-xl mb-7">
                                 {translations.live}
                             </h2>
-                            <a className='py-4 px-12 mr-5 text-base bg-[#7843E9] text-white uppercase tracking-[1px] inline-block font-bold rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.15)] transition-transform duration-300' href="https://budget-tracker-phi-seven.vercel.app/" target="_blank" rel="noopener noreferrer">
-                                {translations.liveLink}
-                            </a>
-                            <a className={`text-base bg-white border-2 border-[#7843E9] shadow-none py-4 px-12 font-bold rounded-[5px] tracking-[1px] ${darkMode ? 'text-white bg-gray-800' : 'text-[#111] bg-white'}`} href="/">
-                                {translations.goBack}
-                            </a>
+                            <div className="max-sm:flex max-sm:flex-col max-sm:space-y-4">
+                                <a className='max-sm:w-2/3 py-4 px-12 mr-5 max-sm:mr-0 text-base bg-[#7843E9] text-white uppercase tracking-[1px] inline-block font-bold rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.15)] transition-transform duration-300 hover:-translate-y-[3px] text-center' href="https://budget-tracker-phi-seven.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                    {translations.liveLink}
+                                </a>
+                                <a className={`max-sm:w-2/3 text-base border-2 border-[#7843E9] shadow-none py-4 px-12 font-bold rounded-[5px] tracking-[1px] ${darkMode ? 'text-white bg-gray-800' : 'text-[#111] bg-white'} transition-transform duration-300 hover:-translate-y-[3px] text-center inline-block`} href="/">
+                                    {translations.goBack}
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

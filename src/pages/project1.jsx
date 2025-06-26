@@ -84,7 +84,7 @@ const Project1 = () => {
                             </div>
                         </div>
                         <div>
-                            <h2 className="block font-bold text-2xl max-sm:text-xl mb-7">
+                            <h2 className="font-bold text-2xl max-sm:text-xl mb-7">
                                 {translations.live}
                             </h2>
                             <div className="max-sm:flex max-sm:flex-col max-sm:space-y-4">
