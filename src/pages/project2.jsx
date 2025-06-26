@@ -1,6 +1,7 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { useSelector } from 'react-redux';
+import project2Img from "../assets/Group-2.png";
 
 
 const Project2 = () => {
@@ -41,7 +42,7 @@ const Project2 = () => {
             <div className="max-w-6xl w-11/12 m-auto">
                 <div className="py-14 px-0 max-w-4xl m-auto ">
                     <div className="w-full mb-10">
-                        <img src="/src/assets/Group-2.png" alt="Project 1" className="" />
+                        <img src={project2Img} alt="Project 1" className="" />
                     </div>
                     <div className="w-full max-w-3xl m-auto">
                         <div className="mb-16">

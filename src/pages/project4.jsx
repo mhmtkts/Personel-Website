@@ -1,9 +1,10 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { useSelector } from 'react-redux';
+import project4Img from "../assets/Group-4.png"; 
 
 
-const Project3 = () => {
+const Project4 = () => {
     const darkMode = useSelector((state) => state.mode.darkMode);
     const translations = useSelector((state) => state.mode.translations);
 
@@ -41,7 +42,7 @@ const Project3 = () => {
             <div className="max-w-6xl w-11/12 m-auto">
                 <div className="py-14 px-0 max-w-4xl m-auto ">
                     <div className="w-full mb-10">
-                        <img src="/src/assets/Group-4.png" alt="Project 1" className="" />
+                        <img src={project4Img} alt="Project 1" className="" />
                     </div>
                     <div className="w-full max-w-3xl m-auto">
                         <div className="mb-16">
@@ -102,4 +103,4 @@ const Project3 = () => {
     );
 }
 
-export default Project3;
+export default Project4;
