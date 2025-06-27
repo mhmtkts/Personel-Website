@@ -53,7 +53,7 @@ const translations = {
     },
     projectsDetail1:"Here you will find some of the personal and clients projects that I created with each project containing its own case study",
     projectButton: "GO TO PROJECT",
-    portfolyo: "Portfolyo",
+    portfolyo: "Portfolio",
     exerciseGuide: "Exercise Guide",
     budgetTracker: "Budget Tracker",
     productList: "Product List",
