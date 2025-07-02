@@ -29,7 +29,7 @@ const Hero = ({projectsRef}) => {
 
 
     return (
-        <div className={`relative md:h-screen max-h-[120rem]`} style={backgroundStyle}>
+        <div className={`relative md:h-screen min-h-[40rem] max-h-[80rem]`} style={backgroundStyle}>
             <div className="max-sm:static max-sm:transform-none max-sm:py-24 max-sm:pb-24 max-sm:m-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-4xl w-[92%]">
                     <h1 className={`max-sm:text-[2rem] block text-[3.5rem] uppercase tracking-[3px] text-center ${darkMode ? "text-white" : "text-[#111]"} font-extrabold`}>{translations.name}</h1>
                     <div>
