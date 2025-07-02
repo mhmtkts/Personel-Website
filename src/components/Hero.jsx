@@ -54,7 +54,7 @@ const Hero = ({projectsRef}) => {
                     <img src={darkMode ? emailWhiteIcon : emailIcon} alt="Email" />
                 </a>
             </div>
-            <div className='absolute bottom-[3%] left-1/2 transform -translate-x-1/2 text-center'>
+            <div className='md:pl-16 absolute bottom-[3%] left-1/2 transform -translate-x-1/2 text-center'>
                 <div className={`hidden md:block w-[25px] h-[40px] border-2 ${darkMode ? 'border-gray-200' : 'border-gray-600'} rounded-full flex justify-center items-start pt-1`}>
                     <div className={`ml-2 w-1 h-2 ${darkMode ? 'bg-gray-200' : 'bg-gray-600'} rounded-full animate-scroll-wheel`}></div>
                 </div>
